@@ -90,7 +90,8 @@ mytest/swegon/model/parameter_version 2.4
 
 The below example will connect to the Swegon Modbus Gateway over a serial (Modbus RTU) connection, assume Modbus address 16 and print out all data that is read.
 
-```$ ./swegon_mqtt.py -m 16 -p
+```
+$ ./swegon_mqtt.py -m 16 -p
 {
    "air_quality": {
       "absolute_humidity": 76.0,
