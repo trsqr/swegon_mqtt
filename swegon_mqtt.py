@@ -138,6 +138,6 @@ if not args.printonly:
       mqtt_client.publish(args.topic + "/model/" + key, swegon_ac["model"][key])
    mqtt_client.loop(timeout=5.0)
 else:
-   print json.dumps(swegon_ac, indent=3, sort_keys=True)
+   print(json.dumps(swegon_ac, indent=3, sort_keys=True))
 
 
