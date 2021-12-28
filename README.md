@@ -8,9 +8,7 @@ https://www.swegon.com/siteassets/_product-documents/home-ventilation/control-eq
 
 ## Usage
 ```
-usage: swegon_mqtt.py [-h] [-p] [-T] [-t TOPIC] [-b BROKER]
-                      [-m MODBUS_ADDRESS] [-d USBDEV] [-H TCP_HOST]
-                      [-P TCP_PORT]
+usage: swegon_mqtt.py [-h] [-p] [-T] [-t TOPIC] [-b BROKER] [-m MODBUS_ADDRESS] [-d USBDEV] [-H TCP_HOST] [-P TCP_PORT] [-B BAUD_RATE]
 
 optional arguments:
   -h, --help         show this help message and exit
@@ -22,7 +20,8 @@ optional arguments:
   -d USBDEV          USB serial device to use, default: /dev/ttyUSB0
   -H TCP_HOST        Modbus TCP address, default: 127.0.0.1
   -P TCP_PORT        Modbus TCP port, default: 502
-  ```
+  -B BAUD_RATE       Serial baud rate, default: 38400
+```
 
 ## Tested with
 
