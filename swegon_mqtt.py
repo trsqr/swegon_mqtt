@@ -29,6 +29,7 @@ parser.add_argument('-m', dest='modbus_address', help="Modbus address of Swegon 
 parser.add_argument('-d', dest='usbdev', help="USB serial device to use, default: /dev/ttyUSB0", default="/dev/ttyUSB0")
 parser.add_argument('-H', dest='tcp_host', help="Modbus TCP address, default: 127.0.0.1", default="127.0.0.1")
 parser.add_argument('-P', dest='tcp_port', help="Modbus TCP port, default: 502", default=502, type=int)
+parser.add_argument('-B', dest='baud_rate', help="Serial baud rate, default: 38400", default=38400, type=int)
 
 
 args = parser.parse_args()
@@ -40,7 +41,7 @@ BYPASS_STATES = ["Closed (winter)", "Open (summer)"]
 if args.modbus_tcp:
     client = ModbusClient(host=args.tcp_host, port=args.tcp_port, timeout=3)
 else:
-    client = ModbusClient(method='rtu', port=args.usbdev, timeout=1, baudrate=9600)
+    client = ModbusClient(method='rtu', port=args.usbdev, timeout=1, baudrate=args.baud_rate)
 
 client.connect()
 
