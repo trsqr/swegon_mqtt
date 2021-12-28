@@ -28,6 +28,8 @@ optional arguments:
 The script is tested with the following:
 * Swegon Casa W3 + Swegon SMBG Modbus Gateway
 
+![image](https://user-images.githubusercontent.com/6545027/147595589-e2195388-e810-4099-8b13-ddb21762caf6.png)
+
 ## Examples
 
 ### MQTT broker
